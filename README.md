@@ -21,7 +21,6 @@ Scanning the code opens a clean, mobile-friendly page showing all their links â€
 - Backend: FastAPI (Python)  
 - Auth: Email/password with JWT  
 - Database: PostgreSQL  
-- QR Codes: Backend-generated  
 - Deployment: Docker on AWS EC2  
 
 ---
