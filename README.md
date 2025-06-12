@@ -45,3 +45,9 @@ Dockerize frontend and backend with Docker Compose. Deploy on AWS EC2 with Docke
 A simple, elegant way to share all your essential links via one QR code. Ideal for professionals and creatives wanting an easy digital business card.
 
 ---
+
+## Gallery
+
+![image](https://github.com/user-attachments/assets/877d8401-9bd7-402c-8acb-21dc9cd9dfcf)
+
+---
