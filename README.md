@@ -8,7 +8,7 @@ Scanning the code opens a clean, mobile-friendly page showing all their links â€
 ## Features âœ¨
 
 - User registration and login with email & password (JWT auth)  
-- Add, view, edit, and delete personal links  
+- Add, view, edit, and delete personal links (up to 5 URLs per user in the free tier)  
 - Unique public profile page (`/u/username`)  
 - Auto-generated QR code to profile  
 - Minimal, mobile-friendly design  
@@ -30,7 +30,7 @@ Scanning the code opens a clean, mobile-friendly page showing all their links â€
 
 - Google OAuth login  
 - Custom QR code designs  
-- Paid premium plans  
+- Paid premium plans with increased URL limits and more features  
 
 ---
 
