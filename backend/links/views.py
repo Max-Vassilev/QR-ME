@@ -8,18 +8,18 @@ class LinkList(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        return Link.objects.filter(author=self.request.user)
+        return Link.objects.filter(owner=self.request.user)
 
 class LinkCreate(generics.CreateAPIView):
     serializer_class = LinkSerializer
     permission_classes = [IsAuthenticated]
 
     def perform_create(self, serializer):
-        serializer.save(author=self.request.user)
+        serializer.save(owner=self.request.user)
 
 class LinkDelete(generics.DestroyAPIView):
     serializer_class = LinkSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        return Link.objects.filter(author=self.request.user)
+        return Link.objects.filter(owner=self.request.user)
