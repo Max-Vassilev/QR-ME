@@ -3,3 +3,6 @@ from django.db import models
 
 class CustomUser(AbstractUser):
     qr_code = models.ImageField(upload_to='qr_codes/', null=True, blank=True)
+
+    def __str__(self):
+        return self.username

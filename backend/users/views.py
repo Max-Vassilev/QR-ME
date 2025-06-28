@@ -16,8 +16,8 @@ class UserSerializer(serializers.ModelSerializer):
         user.save()
         return user
 
-def qr_code_generator(url, filename):
-    qrcode.make(url).save(filename)
+def qr_code_generator(url, path):
+    qrcode.make(url).save(path)
 
 class CreateUserView(generics.CreateAPIView):
     queryset = CustomUser.objects.all()
@@ -27,8 +27,9 @@ class CreateUserView(generics.CreateAPIView):
     def perform_create(self, serializer):
         user = serializer.save()
         url = f"http://localhost:5173/public/{user.username}"
-        filename = f"qr_codes/{user.username}.png"
-        os.makedirs("qr_codes", exist_ok=True)
-        qr_code_generator(url, filename)
+        folder = "../qr_codes"
+        os.makedirs(folder, exist_ok=True)
+        path = f"{folder}/{user.username}.png"
+        qr_code_generator(url, path)
         user.qr_code.name = f"qr_codes/{user.username}.png"
         user.save()

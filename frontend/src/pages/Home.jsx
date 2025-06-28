@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../api";
 import Link from "../components/Link";
+import qrCodeImg from "../../../qr_codes/Garjo.png";
 import "../styles/Home.css";
 
 function Home() {
@@ -57,7 +58,7 @@ function Home() {
       </div>
 
       <div className="qr-button-wrapper">
-        <a href="http://localhost:5173/public/Garjoka" className="qr-button">Share Links</a>
+        <img src={qrCodeImg} alt="QR Code" className="qr-code-image" />
       </div>
 
       <div>
