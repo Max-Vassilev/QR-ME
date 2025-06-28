@@ -1,6 +1,6 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from rest_framework.exceptions import NotFound
 from .serializers import LinkSerializer
 from .models import Link
@@ -32,6 +32,7 @@ class PublicUserLinksView(generics.ListAPIView):
 
     def get_queryset(self):
         username = self.kwargs.get('username')
+        User = get_user_model()
         try:
             user = User.objects.get(username=username)
         except User.DoesNotExist:

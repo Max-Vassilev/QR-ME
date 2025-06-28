@@ -1,3 +1,5 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-# Create your models here.
+class CustomUser(AbstractUser):
+    qr_code = models.ImageField(upload_to='qr_codes/', null=True, blank=True)
