@@ -106,16 +106,17 @@ input[type="submit"]:hover {
 }
 
 .qr-button {
+  display: inline-block;
   background: #0066ff;
   color: white;
   font-size: 24px;
   padding: 20px 40px;
-  border: none;
   border-radius: 16px;
   cursor: pointer;
   font-weight: 700;
   box-shadow: 0 8px 15px rgba(0, 102, 255, 0.3);
   transition: background 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
   user-select: none;
 }
 

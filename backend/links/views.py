@@ -1,5 +1,7 @@
 from rest_framework import generics
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
+from django.contrib.auth.models import User
+from rest_framework.exceptions import NotFound
 from .serializers import LinkSerializer
 from .models import Link
 
@@ -23,3 +25,15 @@ class LinkDelete(generics.DestroyAPIView):
 
     def get_queryset(self):
         return Link.objects.filter(owner=self.request.user)
+
+class PublicUserLinksView(generics.ListAPIView):
+    serializer_class = LinkSerializer
+    permission_classes = [AllowAny]
+
+    def get_queryset(self):
+        username = self.kwargs.get('username')
+        try:
+            user = User.objects.get(username=username)
+        except User.DoesNotExist:
+            raise NotFound("User not found")
+        return Link.objects.filter(owner=user)

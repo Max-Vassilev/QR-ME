@@ -57,7 +57,7 @@ function Home() {
       </div>
 
       <div className="qr-button-wrapper">
-        <button className="qr-button">MyQRCode</button>
+        <a href="http://localhost:5173/public/Garjoka" className="qr-button">Share Links</a>
       </div>
 
       <div>
