@@ -1,24 +1,31 @@
 import { useState, useEffect } from "react";
 import api from "../api";
 import Link from "../components/Link";
-import qrCodeImg from "../../../qr_codes/Garjo.png";
 import "../styles/Home.css";
 
 function Home() {
   const [links, setLinks] = useState([]);
   const [url, setUrl] = useState("");
   const [platform, setPlatform] = useState("");
+  const [qrCodeUrl, setQrCodeUrl] = useState("");
 
   useEffect(() => {
     getLinks();
+    getUser();
   }, []);
 
   const getLinks = () => {
     api
       .get("/links/list/")
-      .then((res) => res.data)
-      .then((data) => {
-        setLinks(data);
+      .then((res) => setLinks(res.data))
+      .catch((err) => alert(err));
+  };
+
+  const getUser = () => {
+    api
+      .get("/users/me/")
+      .then((res) => {
+        setQrCodeUrl(res.data.qr_code_url);
       })
       .catch((err) => alert(err));
   };
@@ -43,10 +50,10 @@ function Home() {
           alert("Link was saved.");
           setUrl("");
           setPlatform("");
+          getLinks();
         } else {
           alert("Failed to save link.");
         }
-        getLinks();
       })
       .catch((error) => alert(error));
   };
@@ -57,9 +64,11 @@ function Home() {
         <a href="/logout/" className="logout-button">Logout</a>
       </div>
 
-      <div className="qr-button-wrapper">
-        <img src={qrCodeImg} alt="QR Code" className="qr-code-image" />
-      </div>
+      {qrCodeUrl && (
+        <div className="qr-button-wrapper">
+          <img src={qrCodeUrl} alt="Your QR Code" className="qr-code-image" />
+        </div>
+      )}
 
       <div>
         <h2>Links</h2>
