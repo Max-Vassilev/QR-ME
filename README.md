@@ -47,6 +47,10 @@ A simple, elegant way to share all your essential links via one QR code. Ideal f
 
 ## Gallery 🖼️
 
+![image](https://github.com/user-attachments/assets/541ffad5-ad96-4277-b8d3-25f6438437dc)
+
+![image](https://github.com/user-attachments/assets/d88992e8-9b9a-4418-99bf-80c06148c4ec)
+
 ![image](https://github.com/user-attachments/assets/78bca298-427a-4b74-9b7c-c026494e02f6)
 
 ![image](https://github.com/user-attachments/assets/d9f376e1-7925-4f1b-ada8-a0d50325aee8)
