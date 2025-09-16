@@ -57,6 +57,12 @@ A simple, elegant way to share all your essential links via one QR code. Ideal f
 
 ---
 
+# Create a virtual environment
 python3 -m venv venv
+
+# Activate the virtual environment (Linux/macOS)
 source venv/bin/activate
+
+# Install dependencies from requirements.txt
 pip install -r requirements.txt
+
