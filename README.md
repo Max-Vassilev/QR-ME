@@ -61,17 +61,24 @@ A simple, elegant way to share all your essential links via one QR code. Ideal f
 ## Backend:
 
 ### Create a virtual environment
+```bash
 python3 -m venv venv
+```
 
 ### Activate the virtual environment (Linux/macOS)
+```bash
 source venv/bin/activate
+```
 
 ### Install dependencies from requirements.txt
+```bash
 pip install -r requirements.txt
+```
 
 ### Apply database migrations
+```bash
 python manage.py migrate
-
+```
 ## Frontend:
 
 ...
