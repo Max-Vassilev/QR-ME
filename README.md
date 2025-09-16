@@ -56,15 +56,22 @@ A simple, elegant way to share all your essential links via one QR code. Ideal f
 ![image](https://github.com/user-attachments/assets/d9f376e1-7925-4f1b-ada8-a0d50325aee8)
 
 ---
+# Run Project in Development Environment
 
-# Create a virtual environment
+## Backend:
+
+### Create a virtual environment
 python3 -m venv venv
 
-# Activate the virtual environment (Linux/macOS)
+### Activate the virtual environment (Linux/macOS)
 source venv/bin/activate
 
-# Install dependencies from requirements.txt
+### Install dependencies from requirements.txt
 pip install -r requirements.txt
 
-# Apply database migrations
+### Apply database migrations
 python manage.py migrate
+
+## Frontend:
+
+...
