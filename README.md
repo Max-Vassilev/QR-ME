@@ -77,7 +77,7 @@ pip install -r requirements.txt
 
 ### Apply database migrations
 ```bash
-python manage.py migrate
+python3 manage.py migrate
 ```
 
 ### Run backend server
