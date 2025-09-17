@@ -82,7 +82,7 @@ python3 manage.py migrate
 
 ### Run backend server
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
 ## Frontend:
 
