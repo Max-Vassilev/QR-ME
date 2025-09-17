@@ -95,3 +95,7 @@ npm i
 ```bash
 npm run dev
 ```
+
+# Run Project in Production Environment
+
+python3 manage.py runserver 0.0.0.0:8000
