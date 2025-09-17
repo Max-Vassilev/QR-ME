@@ -86,4 +86,12 @@ python manage.py runserver
 ```
 ## Frontend:
 
-...
+### Install dependencies
+```bash
+npm i
+```
+
+### Run frontend server
+```bash
+npm run dev
+```
