@@ -80,7 +80,7 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-### 
+### Run backend server
 ```bash
 python manage.py runserver
 ```
