@@ -35,8 +35,7 @@ class CreateUserView(generics.CreateAPIView):
 
     def perform_create(self, serializer):
         user = serializer.save()
-        # url = f"http://localhost:5173/public/{user.username}"
-        url = f"facebook.com"
+        url = f"http://localhost:5173/public/{user.username}"
         folder = os.path.join(settings.MEDIA_ROOT, "qr_codes")
         os.makedirs(folder, exist_ok=True)
         path = os.path.join(folder, f"{user.username}.png")
