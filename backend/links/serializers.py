@@ -4,5 +4,5 @@ from .models import Link
 class LinkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Link
-        fields = ["id", "owner", "platform", "url", "created_at"]
+        fields = ["id", "owner", "platform", "url"]
         extra_kwargs = {"owner": {"read_only": True}}
